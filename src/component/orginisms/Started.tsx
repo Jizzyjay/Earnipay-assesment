@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Logo from "../../assets/Layer_1-2.svg";
 import Input from "../atom/Input";
 import Button from "../atom/Button";
-import bar from '../../assets/barContainer.svg'
+import bar from "../../assets/barContainer.svg";
+import { Link } from "react-router-dom";
+import PhoneInput from "react-phone-input-2";
 
 const Started = () => {
   const [email, setEmail] = useState("");
@@ -17,7 +19,7 @@ const Started = () => {
         <div className="w-full flex flex-col gap-4 px-4">
           <img src={Logo} alt="Logo" className="self-center" />
           <p className="text-[#1A1A1A] font-bold text-2xl text-center">
-           Let's get you started
+            Let's get you started
           </p>
           <p className="text-[#00535C] text-right font-normal cursor-pointer">
             Step 1 <span className="text-[#000]"> of 2</span>
@@ -52,17 +54,27 @@ const Started = () => {
           </div>
           <div className="flex flex-col gap-2">
             <p>Phone Number</p>
-            <Input
+            {/* <Input
               type="number"
               value={email}
               onChange={handleEmailChange}
               placeholder="Enter your first name"
             />
+             */}
+            <PhoneInput
+              country={"ng"}
+            //   value={}
+            //   onChange={}
+            />
           </div>
           <Button label="Continue" className="w-full" />
           <p className="text-center">
             Already have an account?{" "}
-            <span className="text-[#00535C] font-bold cursor-pointer">Log in</span>
+            <Link to="/">
+              <span className="text-[#00535C] font-bold cursor-pointer">
+                Log in
+              </span>
+            </Link>
           </p>
         </div>
       </div>

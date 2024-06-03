@@ -8,7 +8,7 @@ const VerifyEmail = () => {
       <img
         src={Loginimg}
         alt="Illustration representing login"
-       className="hidden lg:block w-full lg:w-[500px] lg:h-full xl:w-[520px] 2xl:w-[950px] object-cover"
+       className="hidden lg:block w-full lg:w-[500px] lg:h-full xl:w-[520px] 2xl:w-[950px] object-cover lazy-loading"
       />
       <div className="w-full lg:w-1/2 flex items-center justify-center p-4">
         <Verify />
