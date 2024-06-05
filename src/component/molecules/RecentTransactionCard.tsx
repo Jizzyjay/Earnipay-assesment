@@ -22,19 +22,17 @@ const RecentTransactionCard: React.FC<RecentTransactionCardProps> = ({
   const [viewAll, setViewAll] = useState(false);
 
   return (
-    <div className="bg-white rounded-xl p-4 shadow-md">
-      {/* Header */}
+    <div className="bg-white rounded-xl p-4 shadow-md mb-6">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-sm font-semibold">Recent Transactions</h2>
         <button
           onClick={() => setViewAll(!viewAll)}
-          className="text-[#00535C] underline text-xs"
+          className="text-[#00535C] underline text-xs cursor-pointer"
         >
           {viewAll ? "hide" : "view all"}
         </button>
       </div>
-
-      {/* Content */}
+   
       {!viewAll ? (
         <div className="flex flex-col items-center justify-center h-48 gap-3 pb-16">
           <img src={box} alt="box" loading="lazy" />

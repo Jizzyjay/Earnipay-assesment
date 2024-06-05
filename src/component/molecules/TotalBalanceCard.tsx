@@ -26,7 +26,7 @@ const TotalBalanceCard = () => {
 
   return (
     <div className="bg-white rounded-xl p-4 flex flex-row justify-between">
-      <div className="w-[16rem]">
+      <div className="w-[12.6rem] lg:w-[16rem]">
         <div className="flex flex-col gap-2">
           <p className="text-[#374151] font-normal">Total balance</p>
           <p className="text-3xl font-semibold">

@@ -102,10 +102,10 @@ const Dashboard: React.FC<DashboardProps> = ({ className }) => {
           </div>
         </div>
         <TotalBalanceCard />
-        <div className="bg-[#FFEFD8] flex flex-row px-2 rounded my-6 items-center">
+        <div className="bg-[#FFEFD8] flex flex-row px-2 rounded my-5 items-center">
           <div className="flex flex-row gap-4 flex-grow">
             <img loading="lazy" src={payment} alt="payment" className="w-12 h-12" />
-            <div className="w-[450px] flex flex-col gap-1">
+            <div className="w-[350px] lg:w-[450px] flex flex-col gap-1">
               <p className="font-semibold text-sm">
                 The New On-Demand Pay Module for Businesses
               </p>
@@ -123,8 +123,8 @@ const Dashboard: React.FC<DashboardProps> = ({ className }) => {
               bgColor="#00535C"
             />
           </div>
-          <div className="flex justify-end items-center mb-16 pl-7 p-2">
-            <img src={cancel} alt="cancel" className="lg:w-5 lg:h-5" loading="lazy" />
+          <div className="flex justify-end items-center mb-16 pl-5 lg:pl-7 p-2">
+            <img src={cancel} alt="cancel" className="w-5 h-5" loading="lazy" />
           </div>
         </div>
         <div className="flex flex-row gap-x-4">

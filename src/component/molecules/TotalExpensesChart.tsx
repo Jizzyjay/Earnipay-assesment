@@ -69,12 +69,14 @@ const TotalExpensesChart: React.FC = () => {
         height: "400px",
       }}
     >
-      <div className="absolute bottom-[20rem] lg:bottom-[5rem] right-[6.5rem] lg:right-[8.5rem]">
-        <h2>Total Expenses</h2>
-        <p>N780,000</p>
+      <div 
+      // className="absolute md:bottom-[10rem] lg:bottom-[5rem] md:right-[8.5rem] lg:right-[8.5rem]"
+      >
+        <h2 className="text-[0.95rem] lg:text-base">Total Expenses</h2>
+        <p className="text-xs lg:text-base">N780,000</p>
       </div>
 
-      <div style={{ position: "relative", width: "100%", height: "100%" }}>
+      <div style={{ position: "relative", width: "85%", height: "85%" }}>
         <canvas
           id="myDoughnutChart"
           style={{ position: "absolute", left: 0, top: 0 }}

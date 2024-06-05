@@ -62,7 +62,7 @@ const Login = () => {
           <Button
             label="Login"
             className={`w-full ${
-              email && password ? "bg-[#00535C]" : "bg-gray-400"
+              email && password ? "bg-[#00535C]" : "bg-[#00535C]"
             }`}
             onClick={handleLogin}
             disabled={!email || !password}

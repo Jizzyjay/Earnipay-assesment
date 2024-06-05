@@ -14,29 +14,9 @@ const EmptyInflowOutflow: React.FC = () => {
   const options: ChartOptions<"bar"> = {
     responsive: true,
     scales: {
-      y: {
-        beginAtZero: true,
-        grid: {
-          display: true,
-        //   drawBorder: false,
-          drawTicks: false,
-          color: function(context) {
-            // Draw grid line only for y=0
-            return context.tick.value === 0 ? '#E5E7EB' : 'transparent';
-          },
-        },
-        ticks: {
-          callback: function (value: number | string) {
-            if (typeof value === "number") {
-              return value === 0 ? "0" : "";
-            }
-            return "";
-          },
-        },
-      },
       x: {
         grid: {
-          display: false, // Hide vertical lines
+          display: false,
         },
         ticks: {
           align: "start",
@@ -46,9 +26,7 @@ const EmptyInflowOutflow: React.FC = () => {
   };
 
   return (
-    <div className="bg-white p-2">
-      <Bar data={data} options={options} />
-    </div>
+      <Bar data={data} options={options}  />
   );
 };
 

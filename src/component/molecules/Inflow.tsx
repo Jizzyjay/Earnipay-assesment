@@ -32,11 +32,11 @@ const Inflow: React.FC = () => {
             options={options}
             value={selectedOption}
             onChange={setSelectedOption}
-            placeholder="Weekly"
+            placeholder=""
           />
         </div>
       </div>
-      <div className="flex flex-row gap-6 pt-4">
+      <div className="flex flex-row gap-6 pt-2">
         <div className="flex flex-col gap-1">
           <div className="flex flex-row gap-2">
             <img loading="lazy" src={inIcon} alt="inflow" />
@@ -58,8 +58,8 @@ const Inflow: React.FC = () => {
         <>
         <div className="border border-[#E5E7EB] rounded-lg mt-10">
           <div className="flex flex-col w-full lg:w-[25rem] gap-2 px-10 py-2 justify-center text-center m-auto">
-            <p>No Data Available Yet.</p>
-            <p className="text-sm">
+            <p className="text-sm">No Data Available Yet.</p>
+            <p className="text-xs">
               Your data will appear here once you complete a <br /> transaction.
             </p>
           </div>

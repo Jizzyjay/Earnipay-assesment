@@ -114,7 +114,7 @@ const Started = () => {
           <Button
             label="Continue"
             className={`w-full ${
-              isFormFilled ? "bg-green-500" : "bg-gray-400"
+              isFormFilled ? "bg-green-500" : "bg-red-400"
             }`}
             onClick={handleSignUp}
             disabled={!isFormFilled}
