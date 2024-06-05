@@ -32,7 +32,7 @@ const Sidebar = () => {
   };
 
   return (
-<div className="flex flex-col h-screen w-[7%] lg:w-1/5 overflow-y-auto">
+<div className="flex flex-col h-screen w-[7%] lg:w-1/5 overflow-y-hidden">
       <div className="flex items-center justify-start p-4">
         <img loading="lazy" src={Logo} alt="Logo" className="hidden lg:inline-block h-8 w-[6rem]" />
       </div>
