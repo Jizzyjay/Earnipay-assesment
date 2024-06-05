@@ -71,6 +71,7 @@ const TotalExpensesChart: React.FC = () => {
     >
       <div 
       // className="absolute md:bottom-[10rem] lg:bottom-[5rem] md:right-[8.5rem] lg:right-[8.5rem]"
+      className="pt-3"
       >
         <h2 className="text-[0.95rem] lg:text-base">Total Expenses</h2>
         <p className="text-xs lg:text-base">N780,000</p>
