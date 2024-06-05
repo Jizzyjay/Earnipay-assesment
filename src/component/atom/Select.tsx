@@ -21,7 +21,7 @@ const Select: React.FC<SelectProps> = ({
     <div className="relative inline-block w-42">
       <label
         htmlFor={id}
-        className="block text-gray-700 text-sm font-bold mb-2"
+        className="block text-gray-700 text-xs font-bold mb-2"
       >
         {label}
       </label>

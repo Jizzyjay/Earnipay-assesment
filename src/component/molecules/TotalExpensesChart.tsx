@@ -69,7 +69,7 @@ const TotalExpensesChart: React.FC = () => {
         height: "400px",
       }}
     >
-      <div style={{ position: "absolute", bottom: "4.5rem", right: "8.5rem" }}>
+      <div className="absolute bottom-[20rem] lg:bottom-[5rem] right-[6.5rem] lg:right-[8.5rem]">
         <h2>Total Expenses</h2>
         <p>N780,000</p>
       </div>

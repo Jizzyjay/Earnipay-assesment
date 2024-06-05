@@ -32,7 +32,7 @@ const Login = () => {
 
   return (
     <div className="bg-[#F9FAFB] h-screen flex items-center justify-center rounded">
-      <div className="bg-white w-[450px] h-[500px] flex flex-col items-center justify-center m-auto">
+      <div className="bg-white w-[350px] md:w-[450px] h-[500px]  flex flex-col items-center justify-center">
         <div className="w-full flex flex-col gap-4 px-4">
           <img src={Logo} alt="Logo" className="self-center" />
           <p className="text-[#1A1A1A] font-bold text-2xl text-center">

@@ -34,7 +34,7 @@ const TotalBalanceCard = () => {
             <span className="text-base">.00</span>
           </p>
           {selectedOption === "option2" ? (
-            <div className="bg-[#ECFDF3] w-[12.5rem] p-2 rounded-full flex flex-row gap-1">
+            <div className="bg-[#ECFDF3] w-full lg:w-[12.5rem] p-2 rounded-full flex flex-row gap-1">
               <img src={arrow} alt="arrow" loading="lazy" />
               <p className="text-[#027A48] text-xs font-medium">
                 +23% more than last month
@@ -79,7 +79,7 @@ const TotalBalanceCard = () => {
           <img src={graph} alt="graph" />
         ) : (
           <div className="border border-[#E5E7EB] rounded-lg">
-            <div className="flex flex-col w-[28rem] gap-2 px-10 py-2 justify-center text-center m-auto">
+            <div className="flex flex-col w-full lg:w-[28rem] gap-2 px-10 py-2 justify-center text-center m-auto">
               <p className="text-sm">No Data Available Yet.</p>
               <p className="text-sm">
                 Your data will appear here once you complete a <br />{" "}

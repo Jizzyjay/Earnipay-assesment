@@ -57,7 +57,7 @@ const Inflow: React.FC = () => {
       {selectedOption !== "option2" ? (
         <>
         <div className="border border-[#E5E7EB] rounded-lg mt-10">
-          <div className="flex flex-col w-[25rem] gap-2 px-10 py-2 justify-center text-center m-auto">
+          <div className="flex flex-col w-full lg:w-[25rem] gap-2 px-10 py-2 justify-center text-center m-auto">
             <p>No Data Available Yet.</p>
             <p className="text-sm">
               Your data will appear here once you complete a <br /> transaction.

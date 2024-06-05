@@ -17,7 +17,7 @@ const SpentCard = () => {
   };
 
   return (
-    <div className="bg-white lg:w-[300px] xl:w-[400px] h-[500px] rounded-xl p-4 my-2 shadow-md">
+    <div className="bg-white w-full lg:w-[300px] xl:w-[400px] h-[500px] rounded-xl p-4 my-2 shadow-md">
       <div className="flex justify-between items-center">
         <h2 className="text-sm font-semibold">How you spent</h2>
         <div className=" flex justify-end">

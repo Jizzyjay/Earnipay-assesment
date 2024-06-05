@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import {getAuth} from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "",
+  apiKey: "AIzaSyC6kiKMixAmRpMGvKVK6rLmfKIJkgOHIBE",
   // authDomain: "earnipay-f9075.firebaseapp.com",
    authDomain: "https://earnipay-assesment.vercel.app/",
   projectId: "earnipay-f9075",

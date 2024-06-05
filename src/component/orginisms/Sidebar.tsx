@@ -32,9 +32,9 @@ const Sidebar = () => {
   };
 
   return (
-<div className="flex flex-col h-screen w-1/5 overflow-y-auto">
+<div className="flex flex-col h-screen w-[7%] lg:w-1/5 overflow-y-auto">
       <div className="flex items-center justify-start p-4">
-        <img loading="lazy" src={Logo} alt="Logo" className="h-8 w-[6rem]" />
+        <img loading="lazy" src={Logo} alt="Logo" className="hidden lg:inline-block h-8 w-[6rem]" />
       </div>
       <div className="flex-1 flex flex-col justify-between">
         <div>
@@ -49,14 +49,14 @@ const Sidebar = () => {
                   alt="dashboard"
                   className={iconClass("/dashboard")}
                 />
-                <Link to="" className="ml-3 text-xs font-normal">
+                <Link to="" className="hidden lg:inline-block ml-3 text-xs font-normal">
                   Dashboard
                 </Link>
               </div>
               <img loading="lazy"
                 src={arrow}
                 alt="arrow"
-                className={iconClass("/dashboard")}
+                className={`hidden lg:inline-block iconClass("/dashboard")`}
               />
             </div>
             <div
@@ -69,11 +69,11 @@ const Sidebar = () => {
                   alt="payment"
                   className={iconClass("/payments")}
                 />
-                <Link to="" className="ml-3 text-xs font-normal">
+                <Link to="" className="hidden lg:inline-block ml-3 text-xs font-normal">
                   Payments
                 </Link>
               </div>
-              <img loading="lazy" src={arrow} alt="arrow" className={iconClass("/payments")} />
+              <img loading="lazy" src={arrow} alt="arrow" className={`hidden lg:inline-block iconClass("/payments")`} />
             </div>
             <div
               className={linkClass("/people")}
@@ -81,11 +81,11 @@ const Sidebar = () => {
             >
               <div className="flex flex-row items-center">
                 <img loading="lazy" src={user} alt="user" className={iconClass("/people")} />
-                <Link to="" className="ml-3 text-xs font-normal">
+                <Link to="" className="hidden lg:inline-block ml-3 text-xs font-normal">
                   People
                 </Link>
               </div>
-              <img loading="lazy" src={arrow} alt="arrow" className={iconClass("/people")} />
+              <img loading="lazy" src={arrow} alt="arrow" className={`hidden lg:inline-block iconClass("/people")`} />
             </div>
             <div
               className={linkClass("/payroll")}
@@ -97,11 +97,11 @@ const Sidebar = () => {
                   alt="payment"
                   className={iconClass("/payroll")}
                 />
-                <Link to="" className="ml-3 text-xs font-normal">
+                <Link to="" className="hidden lg:inline-block ml-3 text-xs font-normal">
                   Payroll
                 </Link>
               </div>
-              <img loading="lazy" src={arrow} alt="arrow" className={iconClass("/payroll")} />
+              <img loading="lazy" src={arrow} alt="arrow" className={`hidden lg:inline-block iconClass("/payroll")`} />
             </div>
             <div
               className={linkClass("/on-demand-pay")}
@@ -113,14 +113,14 @@ const Sidebar = () => {
                   alt="money"
                   className={iconClass("/on-demand-pay")}
                 />
-                <Link to="" className="ml-3 text-xs font-normal">
+                <Link to="" className="hidden lg:inline-block ml-3 text-xs font-normal">
                   On-Demand Pay
                 </Link>
               </div>
               <img loading="lazy"
                 src={arrow}
                 alt="arrow"
-                className={iconClass("/on-demand-pay")}
+                className={`hidden lg:inline-block iconClass("/on-demand-pay")`}
               />
             </div>
           </nav>
@@ -137,11 +137,11 @@ const Sidebar = () => {
                   alt="check"
                   className={iconClass("/approval")}
                 />
-                <Link to="" className="ml-3 text-xs font-normal">
+                <Link to="" className="hidden lg:inline-block ml-3 text-xs font-normal">
                   Approval
                 </Link>
               </div>
-              <img loading="lazy" src={arrow} alt="arrow" className={iconClass("/approval")} />
+              <img loading="lazy" src={arrow} alt="arrow" className={`hidden lg:inline-block iconClass("/approval")`} />
             </div>
             <div
               className={linkClass("/audit-logs")}
@@ -153,14 +153,14 @@ const Sidebar = () => {
                   alt="layer"
                   className={iconClass("/audit-logs")}
                 />
-                <Link to="" className="ml-3 text-xs font-normal">
+                <Link to="" className="hidden lg:inline-block ml-3 text-xs font-normal">
                   Audit Logs
                 </Link>
               </div>
               <img loading="lazy"
                 src={arrow}
                 alt="arrow"
-                className={iconClass("/audit-logs")}
+                className={`hidden lg:inline-block iconClass("/audit-logs")`}
               />
             </div>
             <div
@@ -173,11 +173,11 @@ const Sidebar = () => {
                   alt="setting"
                   className={iconClass("/settings")}
                 />
-                <Link to="" className="ml-3 text-xs font-normal">
+                <Link to="" className="hidden lg:inline-block ml-3 text-xs font-normal">
                   Settings
                 </Link>
               </div>
-              <img loading="lazy" src={arrow} alt="arrow" className={iconClass("/settings")} />
+              <img loading="lazy" src={arrow} alt="arrow" className={`hidden lg:inline-block iconClass("/settings")`} />
             </div>
           </nav>
         </div>

@@ -86,7 +86,7 @@ const Dashboard: React.FC<DashboardProps> = ({ className }) => {
   ];
 
   return (
-    <div className={`w-4/5 bg-[#F4F4F4] ${className}`}>
+    <div className={`w-full lg:w-4/5 bg-[#F4F4F4] ${className}`}>
       <DashboardHeader />
       <div className="px-6">
         <div className="py-6 flex flex-row justify-between items-center">
@@ -124,7 +124,7 @@ const Dashboard: React.FC<DashboardProps> = ({ className }) => {
             />
           </div>
           <div className="flex justify-end items-center mb-16 pl-7 p-2">
-            <img src={cancel} alt="cancel" className="w-5 h-5" loading="lazy" />
+            <img src={cancel} alt="cancel" className="lg:w-5 lg:h-5" loading="lazy" />
           </div>
         </div>
         <div className="flex flex-row gap-x-4">
