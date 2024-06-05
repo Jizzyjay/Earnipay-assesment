@@ -36,7 +36,7 @@ const Sidebar = () => {
       <div className="flex items-center justify-start p-4">
         <img loading="lazy" src={Logo} alt="Logo" className="hidden lg:inline-block h-8 w-[6rem]" />
       </div>
-      <div className="flex-1 flex flex-col justify-between">
+      <div className="flex-1 flex flex-col justify-between md:pt-[4rem]">
         <div>
           <nav className="mt-1 flex flex-col gap-3">
             <div

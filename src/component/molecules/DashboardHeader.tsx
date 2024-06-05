@@ -26,6 +26,14 @@ const DashboardHeader = () => {
   const handleSignOut = async () => {
     const auth = getAuth();
     await signOut(auth);
+
+    localStorage.clear();
+
+    if ('caches' in window) {
+      const cacheNames = await caches.keys();
+      await Promise.all(cacheNames.map(cacheName => caches.delete(cacheName)));
+    }
+
     navigate("/login");
   };
 
