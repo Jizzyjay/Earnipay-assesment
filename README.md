@@ -11,7 +11,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [live link](https://earnipay-f9075.web.app)
+- Live Site URL: [live link](https://earnipay-assesment.vercel.app/p)
 - Github URL: [live link](https://earnipay-assesment.vercel.app/)
 
 
