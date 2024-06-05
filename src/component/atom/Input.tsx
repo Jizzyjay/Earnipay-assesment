@@ -24,7 +24,8 @@ const Input: React.FC<InputProps> = ({
       onChange={onChange}
       placeholder={placeholder}
       disabled={disabled}
-      className={`px-4 py-4 border rounded focus:outline-none focus:ring-2 focus:ring-[#00535C] focus:border-transparent disabled:opacity-50 ${className}`}
+      required
+      className={`px-4 py-3 border rounded focus:outline-none focus:ring-2 focus:ring-[#00535C] focus:border-transparent disabled:opacity-50 ${className}`}
     />
   );
 };

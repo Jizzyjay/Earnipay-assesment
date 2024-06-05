@@ -13,7 +13,9 @@ import layer from "../../assets/3-layers.svg";
 
 const Sidebar = () => {
   const location = useLocation();
-  const [activeLink, setActiveLink] = useState(location.pathname);
+  const [activeLink, setActiveLink] = useState(
+    location.pathname === "/" ? "/dashboard" : location.pathname
+  );
 
   const handleLinkClick = (path: any) => {
     setActiveLink(path);
@@ -30,9 +32,9 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-red-100 w-1/5">
+<div className="flex flex-col h-screen w-1/5 overflow-y-auto">
       <div className="flex items-center justify-start p-4">
-        <img src={Logo} alt="Logo" className="h-8 w-[6rem]" />
+        <img loading="lazy" src={Logo} alt="Logo" className="h-8 w-[6rem]" />
       </div>
       <div className="flex-1 flex flex-col justify-between">
         <div>
@@ -42,7 +44,7 @@ const Sidebar = () => {
               onClick={() => handleLinkClick("/dashboard")}
             >
               <div className="flex flex-row items-center">
-                <img
+                <img loading="lazy"
                   src={dashIcon}
                   alt="dashboard"
                   className={iconClass("/dashboard")}
@@ -51,7 +53,7 @@ const Sidebar = () => {
                   Dashboard
                 </Link>
               </div>
-              <img
+              <img loading="lazy"
                 src={arrow}
                 alt="arrow"
                 className={iconClass("/dashboard")}
@@ -62,7 +64,7 @@ const Sidebar = () => {
               onClick={() => handleLinkClick("/payments")}
             >
               <div className="flex flex-row items-center">
-                <img
+                <img loading="lazy"
                   src={payIcon}
                   alt="payment"
                   className={iconClass("/payments")}
@@ -71,26 +73,26 @@ const Sidebar = () => {
                   Payments
                 </Link>
               </div>
-              <img src={arrow} alt="arrow" className={iconClass("/payments")} />
+              <img loading="lazy" src={arrow} alt="arrow" className={iconClass("/payments")} />
             </div>
             <div
               className={linkClass("/people")}
               onClick={() => handleLinkClick("/people")}
             >
               <div className="flex flex-row items-center">
-                <img src={user} alt="user" className={iconClass("/people")} />
+                <img loading="lazy" src={user} alt="user" className={iconClass("/people")} />
                 <Link to="" className="ml-3 text-xs font-normal">
                   People
                 </Link>
               </div>
-              <img src={arrow} alt="arrow" className={iconClass("/people")} />
+              <img loading="lazy" src={arrow} alt="arrow" className={iconClass("/people")} />
             </div>
             <div
               className={linkClass("/payroll")}
               onClick={() => handleLinkClick("/payroll")}
             >
               <div className="flex flex-row items-center">
-                <img
+                <img loading="lazy"
                   src={naira}
                   alt="payment"
                   className={iconClass("/payroll")}
@@ -99,14 +101,14 @@ const Sidebar = () => {
                   Payroll
                 </Link>
               </div>
-              <img src={arrow} alt="arrow" className={iconClass("/payroll")} />
+              <img loading="lazy" src={arrow} alt="arrow" className={iconClass("/payroll")} />
             </div>
             <div
               className={linkClass("/on-demand-pay")}
               onClick={() => handleLinkClick("/on-demand-pay")}
             >
               <div className="flex flex-row items-center">
-                <img
+                <img loading="lazy"
                   src={money}
                   alt="money"
                   className={iconClass("/on-demand-pay")}
@@ -115,7 +117,7 @@ const Sidebar = () => {
                   On-Demand Pay
                 </Link>
               </div>
-              <img
+              <img loading="lazy"
                 src={arrow}
                 alt="arrow"
                 className={iconClass("/on-demand-pay")}
@@ -130,7 +132,7 @@ const Sidebar = () => {
               onClick={() => handleLinkClick("/approval")}
             >
               <div className="flex flex-row items-center">
-                <img
+                <img loading="lazy"
                   src={check}
                   alt="check"
                   className={iconClass("/approval")}
@@ -139,14 +141,14 @@ const Sidebar = () => {
                   Approval
                 </Link>
               </div>
-              <img src={arrow} alt="arrow" className={iconClass("/approval")} />
+              <img loading="lazy" src={arrow} alt="arrow" className={iconClass("/approval")} />
             </div>
             <div
               className={linkClass("/audit-logs")}
               onClick={() => handleLinkClick("/audit-logs")}
             >
               <div className="flex flex-row items-center">
-                <img
+                <img loading="lazy"
                   src={layer}
                   alt="layer"
                   className={iconClass("/audit-logs")}
@@ -155,7 +157,7 @@ const Sidebar = () => {
                   Audit Logs
                 </Link>
               </div>
-              <img
+              <img loading="lazy"
                 src={arrow}
                 alt="arrow"
                 className={iconClass("/audit-logs")}
@@ -166,7 +168,7 @@ const Sidebar = () => {
               onClick={() => handleLinkClick("/settings")}
             >
               <div className="flex flex-row items-center">
-                <img
+                <img loading="lazy"
                   src={settingIcon}
                   alt="setting"
                   className={iconClass("/settings")}
@@ -175,7 +177,7 @@ const Sidebar = () => {
                   Settings
                 </Link>
               </div>
-              <img src={arrow} alt="arrow" className={iconClass("/settings")} />
+              <img loading="lazy" src={arrow} alt="arrow" className={iconClass("/settings")} />
             </div>
           </nav>
         </div>

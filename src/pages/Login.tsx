@@ -1,11 +1,12 @@
 import LoginPage from "../component/orginisms/Login";
-import Loginimg from "../assets/Frame 1487626269.svg";
+import LoginImg from "../assets/Frame 1487626269.svg";
 
 const Login = () => {
   return (
     <div className="bg-[#F9FAFB] w-full h-screen flex flex-col lg:flex-row justify-between items-center lg:items-stretch">
       <img
-        src={Loginimg}
+        src={LoginImg}
+        loading="lazy"
         alt="Illustration representing login"
         className="hidden lg:block w-full lg:w-[500px] lg:h-full xl:w-[520px] 2xl:w-[950px] object-cover"
       />

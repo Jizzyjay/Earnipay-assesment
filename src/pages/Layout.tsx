@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <div className='flex flex-row'>
         <Sidebar />
-        <Dashboard />
+        <Dashboard className='overflow-scroll'/>
     </div>
   )
 }
