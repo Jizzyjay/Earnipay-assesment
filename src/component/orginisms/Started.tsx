@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../../assets/Layer_1-2.svg";
 import Input from "../atom/Input";
-import Button from "../atom/Button";
 import bar from "../../assets/barContainer.svg";
 import { Link, useNavigate } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
@@ -111,14 +110,15 @@ const Started = () => {
               inputStyle={{ width: "100%" }}
             />
           </div>
-          <Button
-            label="Continue"
-            className={`w-full ${
-              isFormFilled ? "bg-green-500" : "bg-red-400"
+          <button
+            className={`w-full p-3 rounded-md text-white${
+              isFormFilled ? "bg-[#00535C]" : "bg-gray-500"
             }`}
             onClick={handleSignUp}
             disabled={!isFormFilled}
-          />
+          >
+            Continue
+          </button>
           <p className="text-center">
             Already have an account?{" "}
             <Link to="/">

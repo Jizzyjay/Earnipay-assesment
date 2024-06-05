@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Logo from "../../assets/Layer_1-2.svg";
 import Input from "../atom/Input";
 import PasswordInput from "../atom/PasswordInput";
-import Button from "../atom/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { doSignInWithEmailAndPassword } from "../../firebase/auth";
 
@@ -59,14 +58,15 @@ const Login = () => {
           <p className="text-[#00535C] text-right cursor-pointer">
             Forgot password?
           </p>
-          <Button
-            label="Login"
-            className={`w-full ${
-              email && password ? "bg-[#00535C]" : "bg-[#00535C]"
+          <button
+            className={`w-full p-3 rounded-md text-white ${
+              email && password ? "bg-[#00535C]" : "bg-gray-500"
             }`}
             onClick={handleLogin}
             disabled={!email || !password}
-          />
+          >
+            Login
+            </button>
           <p className="text-center">
             Don’t have an account?{" "}
             <Link to="/get/started">
