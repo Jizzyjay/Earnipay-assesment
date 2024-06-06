@@ -127,12 +127,14 @@ const Dashboard: React.FC<DashboardProps> = ({ className }) => {
             <img src={cancel} alt="cancel" className="w-5 h-5" loading="lazy" />
           </div>
         </div>
-        <div className="flex flex-row gap-x-4">
-          <div>
+        <div className="flex flex-col md:flex-row gap-x-2">
+          <div className="w-full md:w-2/4 mb-2">
             <YieldCard />
             <Inflow />
           </div>
+          <div className="w-full md:w-2/4">
           <SpentCard />
+          </div>
         </div>
         <RecentTransactionCard transactionDetails={transactionDetails} />
       </div>

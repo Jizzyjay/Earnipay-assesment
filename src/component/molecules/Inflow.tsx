@@ -23,7 +23,7 @@ const Inflow: React.FC = () => {
   };
 
   return (
-    <div className="bg-white rounded-xl p-4 my-4 shadow-md">
+    <div className="w-full bg-white h-[370px] xl:h-[480px] rounded-xl p-4 my-2 shadow-md">
       <div className="flex justify-between items-center border-b-2 pb-2">
         <h2 className="text-xs font-semibold">Inflow v. Outflow</h2>
         <div className="flex justify-end">
@@ -56,7 +56,7 @@ const Inflow: React.FC = () => {
 
       {selectedOption !== "option2" ? (
         <>
-        <div className="border border-[#E5E7EB] rounded-lg mt-10">
+        <div className="border border-[#E5E7EB] rounded-lg mt-1">
           <div className="flex flex-col w-full lg:w-[25rem] gap-2 px-10 py-2 justify-center text-center m-auto">
             <p className="text-sm">No Data Available Yet.</p>
             <p className="text-xs">
