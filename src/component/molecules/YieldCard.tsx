@@ -3,7 +3,7 @@ import graph from '../../assets/Frame 2147223819.svg'
 
 const YieldCard = () => {
   return (
-    <div className='bg-white rounded-lg my-2 pt-2 px-4 flex flex-row gap-10'>
+    <div className='hidden md:flex flex-row bg-white rounded-lg my-2 pt-2 px-4 gap-10'>
         <div>
             <p className='text-sm'>Yield earned this month</p>
             <p className='font-bold pt-1'>₦0.00</p>
