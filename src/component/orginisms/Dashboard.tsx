@@ -94,7 +94,7 @@ const Dashboard: React.FC<DashboardProps> = ({ className }) => {
             <h3 className="text-xl font-medium">Good morning, Laolu!</h3>
             <p className="text-[#718096] text-xs">Apr 16, 2024 • 12:35 pm</p>
           </div>
-          <div className="flex flex-row gap-1">
+          <div className="hidden md:flex flex-row gap-1">
             <img loading="lazy" src={star} alt="star" />
             <h3 className="text-[#00535C] text-xs pt-1 font-medium">
               Customize Dashboard
@@ -102,9 +102,14 @@ const Dashboard: React.FC<DashboardProps> = ({ className }) => {
           </div>
         </div>
         <TotalBalanceCard />
-        <div className="bg-[#FFEFD8] flex flex-row px-2 rounded my-5 items-center">
+        <div className="bg-[#FFEFD8] hidden md:flex flex-row px-2 rounded my-5 items-center">
           <div className="flex flex-row gap-4 flex-grow">
-            <img loading="lazy" src={payment} alt="payment" className="w-12 h-12" />
+            <img
+              loading="lazy"
+              src={payment}
+              alt="payment"
+              className="w-12 h-12"
+            />
             <div className="w-[350px] lg:w-[450px] flex flex-col gap-1">
               <p className="font-semibold text-sm">
                 The New On-Demand Pay Module for Businesses
@@ -133,7 +138,7 @@ const Dashboard: React.FC<DashboardProps> = ({ className }) => {
             <Inflow />
           </div>
           <div className="w-full md:w-2/4">
-          <SpentCard />
+            <SpentCard />
           </div>
         </div>
         <RecentTransactionCard transactionDetails={transactionDetails} />

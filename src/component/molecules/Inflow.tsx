@@ -23,7 +23,7 @@ const Inflow: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-white h-[370px] xl:h-[480px] rounded-xl p-4 my-2 shadow-md">
+    <div className="w-full bg-white md:h-[370px] xl:h-[480px] rounded-xl p-4 my-2 shadow-md">
       <div className="flex justify-between items-center border-b-2 pb-2">
         <h2 className="text-xs font-semibold">Inflow v. Outflow</h2>
         <div className="flex justify-end">

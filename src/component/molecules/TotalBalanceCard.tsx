@@ -63,7 +63,7 @@ const TotalBalanceCard = () => {
         </div>
       </div>
       <div>
-        <img src={Line} alt="Line" loading="lazy" />
+        <img src={Line} alt="Line" loading="lazy" className="hidden md:block" />
       </div>
       <div>
         <div className="py-4 flex justify-end">
@@ -76,9 +76,9 @@ const TotalBalanceCard = () => {
           />
         </div>
         {selectedOption === "option2" ? (
-          <img src={graph} alt="graph" />
+          <img src={graph} alt="graph" className="hidden md:block md:w-[350px]" />
         ) : (
-          <div className="border border-[#E5E7EB] rounded-lg">
+          <div className="hidden md:block border border-[#E5E7EB] rounded-lg">
             <div className="flex flex-col w-full lg:w-[28rem] gap-2 px-10 py-2 justify-center text-center m-auto">
               <p className="text-sm">No Data Available Yet.</p>
               <p className="text-sm">

@@ -43,7 +43,7 @@ const DashboardHeader = () => {
 
   return (
     <div className="flex items-center justify-between p-4 bg-white shadow-sm">
-      <h1 className="text-base font-normal">Dashboard</h1>
+      <h1 className="hidden lg:block text-base font-normal">Dashboard</h1>
       <div className="flex items-center space-x-4">
         <div className="relative">
           <input
@@ -70,7 +70,7 @@ const DashboardHeader = () => {
             alt="User"
             className="w-10 h-10 rounded-full"
           />
-          <div className="flex flex-col gap-1">
+          <div className="hidden md:flex flex-col gap-1">
             <p className="text-sm text-[#4A5564] font-medium">Laolu Oyedele</p>
             <p className="text-xs text-[#9CA3AF] font-normal">
               {userEmail || "Loading..."}
@@ -80,7 +80,7 @@ const DashboardHeader = () => {
             loading="lazy"
             src={arrow}
             alt="arrow"
-            className="w-8 h-8 cursor-pointer"
+            className="hidden md:block w-8 h-8 cursor-pointer"
             onClick={toggleDropdown}
           />
         </div>
