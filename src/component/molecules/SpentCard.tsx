@@ -18,7 +18,7 @@ const SpentCard = () => {
 
   return (
     <div className="bg-white h-[450px] xl:h-[555px] rounded-xl p-2 my-2 shadow-md">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center mb-16">
         <h2 className="text-sm font-semibold">How you spent</h2>
         <div className=" flex justify-end">
           <Select

@@ -18,7 +18,7 @@ const Select: React.FC<SelectProps> = ({
   placeholder,
 }) => {
   return (
-    <div className="relative inline-block w-42">
+    <div className="relative inline-block w-42 cursor-pointer">
       <label
         htmlFor={id}
         className="block text-gray-700 text-xs font-bold mb-2"
@@ -37,14 +37,14 @@ const Select: React.FC<SelectProps> = ({
           </option>
         )}
         {options.map((option) => (
-          <option key={option.value} value={option.value} className="text-xs">
+          <option key={option.value} value={option.value} className="text-xs cursor-pointer">
             {option.label}
           </option>
         ))}
       </select>
-      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pt-1 px-2 text-gray-700">
+      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pt-1 px-2 text-gray-700 cursor-pointer">
         <svg
-          className="fill-current h-4 w-4"
+          className="fill-current h-4 w-4 cursor-pointer"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >

@@ -103,41 +103,45 @@ const Dashboard: React.FC<DashboardProps> = ({ className }) => {
         </div>
         <TotalBalanceCard />
         <div className="bg-[#FFEFD8] hidden md:flex flex-row px-2 rounded my-5 items-center">
-          <div className="flex flex-row gap-4 flex-grow">
-            <img
-              loading="lazy"
-              src={payment}
-              alt="payment"
-              className="w-12 h-12"
-            />
+          <div className="flex flex-row xl:justify-between gap-[8.5rem] flex-grow">
             <div className="w-[350px] lg:w-[450px] flex flex-col gap-1">
-              <p className="font-semibold text-sm">
-                The New On-Demand Pay Module for Businesses
-              </p>
-              <p className="text-[#4A5564] text-xs">
-                Supercharge your business and allow your employees to request
-                their wages anytime and anywhere, directly from their
-                smartphones
-              </p>
+              <div className="flex flex-row gap-3 justify-center items-center">
+                <img
+                  loading="lazy"
+                  src={payment}
+                  alt="payment"
+                  className="w-12 h-12"
+                />
+                <div>
+                  <p className="font-semibold text-sm">
+                    The New On-Demand Pay Module for Businesses
+                  </p>
+                  <p className="text-[#4A5564] text-xs">
+                    Supercharge your business and allow your employees to
+                    request their wages anytime and anywhere, directly from
+                    their smartphones
+                  </p>
+                </div>
+              </div>
             </div>
             <Button
               label="Watch Video"
               imgSrc={watch}
-              className="w-[180px] p-0 mt-4"
+              className="w-[140px] p-0 mt-4 h-[40px]"
               textColor="#fff"
               bgColor="#00535C"
             />
           </div>
           <div className="flex justify-end items-center mb-16 pl-5 lg:pl-7 p-2">
-            <img src={cancel} alt="cancel" className="w-5 h-5" loading="lazy" />
+            <img src={cancel} alt="cancel" className="w-5 h-5 lg:mr-[1rem]" loading="lazy" />
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-x-2">
-          <div className="w-full md:w-2/4 mb-2">
+          <div className="w-full md:w-3/5 mb-2">
             <YieldCard />
             <Inflow />
           </div>
-          <div className="w-full md:w-2/4">
+          <div className="w-full md:w-2/5">
             <SpentCard />
           </div>
         </div>

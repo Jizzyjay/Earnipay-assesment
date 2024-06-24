@@ -6,6 +6,26 @@ const TotalExpensesChart: React.FC = () => {
     const ctx = document.getElementById("myDoughnutChart") as HTMLCanvasElement;
     if (!ctx) return;
 
+    const drawCenterTextPlugin = {
+      id: "drawCenterText",
+      afterDraw(chart: any) {
+        const { ctx } = chart;
+        ctx.save();
+        const centerX = (chart.chartArea.left + chart.chartArea.right) / 2;
+        const centerY = (chart.chartArea.top + chart.chartArea.bottom) / 2;
+
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.font = "bold 12px Arial"; // Reduced font size for "Total Expenses"
+        ctx.fillStyle = "#000";
+        ctx.fillText("Total Expenses", centerX, centerY - 10);
+
+        ctx.font = "bold 25px Arial";
+        ctx.fillText("N780,000", centerX, centerY + 15);
+        ctx.restore();
+      },
+    };
+
     const myDoughnutChart = new Chart(ctx, {
       type: "doughnut",
       data: {
@@ -29,7 +49,8 @@ const TotalExpensesChart: React.FC = () => {
               "#72B3B8", // Transfer
               "#DC2626", // Electricity
             ],
-            borderWidth: 0,
+            borderWidth: 5,
+            borderRadius: 10,
           },
         ],
       },
@@ -39,12 +60,12 @@ const TotalExpensesChart: React.FC = () => {
             display: true,
             position: "bottom",
             labels: {
-              boxWidth: 5,
-              boxHeight: 5,
+              boxWidth: 2,
+              boxHeight: 2,
               padding: 10,
               borderRadius: 50,
               font: {
-                size: 12,
+                size: 10,
               },
             },
           },
@@ -53,6 +74,7 @@ const TotalExpensesChart: React.FC = () => {
         maintainAspectRatio: false,
         cutout: "80%",
       },
+      plugins: [drawCenterTextPlugin],
     });
 
     return () => {
@@ -65,18 +87,10 @@ const TotalExpensesChart: React.FC = () => {
       style={{
         textAlign: "center",
         margin: "auto",
-        width: "80%",
-        height: "400px",
+        width: "70%",
+        height: "350px",
       }}
     >
-      <div 
-      // className="absolute md:bottom-[10rem] lg:bottom-[5rem] md:right-[8.5rem] lg:right-[8.5rem]"
-      className="py-3"
-      >
-        <h2 className="text-[0.95rem] lg:text-base">Total Expenses</h2>
-        <p className="text-xs lg:text-base">N780,000</p>
-      </div>
-
       <div style={{ position: "relative", width: "85%", height: "85%" }}>
         <canvas
           id="myDoughnutChart"

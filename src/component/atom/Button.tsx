@@ -26,11 +26,11 @@ const Button: React.FC<ButtonProps> = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`flex items-center justify-center gap-2 px-3 py-3 rounded-lg focus:outline-none disabled:opacity-50 ${className}`}
+      className={`flex items-center justify-center gap-1 px-3 py-3 rounded-lg focus:outline-none disabled:opacity-50 ${className}`}
       style={{ backgroundColor: bgColor, color: textColor }}
     >
       {imgSrc && <img src={imgSrc} alt={label} className="" loading="lazy" />}
-      {label}
+      <span className="text-xs">{label}</span>
     </button>
   );
 };
