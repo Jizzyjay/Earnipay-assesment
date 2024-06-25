@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DashboardHeader from "../molecules/DashboardHeader";
 import star from "../../assets/Star Shine.svg";
 import TotalBalanceCard from "../molecules/TotalBalanceCard";
@@ -15,7 +15,49 @@ interface DashboardProps {
   className?: string;
 }
 
+const getCurrentTime = () => {
+  const now = new Date();
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  };
+  const formattedDate = now.toLocaleDateString("en-US", options);
+  const formattedTime = now.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
+
+  return `${formattedDate} • ${formattedTime}`;
+};
+
+const getGreeting = () => {
+  const now = new Date();
+  const hour = now.getHours();
+
+  if (hour < 12) {
+    return "Good morning";
+  } else if (hour < 18) {
+    return "Good afternoon";
+  } else {
+    return "Good evening";
+  }
+};
+
 const Dashboard: React.FC<DashboardProps> = ({ className }) => {
+  const [currentTime, setCurrentTime] = useState(getCurrentTime());
+  const [greeting, setGreeting] = useState(getGreeting());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(getCurrentTime());
+      setGreeting(getGreeting());
+    }, 60000); // Update every minute
+
+    return () => clearInterval(timer); // Clean up the timer on component unmount
+  }, []);
+
   const transactionDetails = [
     {
       id: 1,
@@ -91,8 +133,8 @@ const Dashboard: React.FC<DashboardProps> = ({ className }) => {
       <div className="px-6">
         <div className="py-6 flex flex-row justify-between items-center">
           <div className="flex flex-col gap-1">
-            <h3 className="text-xl font-medium">Good morning, Laolu!</h3>
-            <p className="text-[#718096] text-xs">Apr 16, 2024 • 12:35 pm</p>
+            <h3 className="text-xl font-medium">{`${greeting}, Laolu!`}</h3>
+            <p className="text-[#718096] text-xs">{currentTime}</p>
           </div>
           <div className="hidden md:flex flex-row gap-1">
             <img loading="lazy" src={star} alt="star" />
@@ -133,7 +175,12 @@ const Dashboard: React.FC<DashboardProps> = ({ className }) => {
             />
           </div>
           <div className="flex justify-end items-center mb-16 pl-5 lg:pl-7 p-2">
-            <img src={cancel} alt="cancel" className="w-5 h-5 lg:mr-[1rem]" loading="lazy" />
+            <img
+              src={cancel}
+              alt="cancel"
+              className="w-5 h-5 lg:mr-[1rem]"
+              loading="lazy"
+            />
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-x-2">
