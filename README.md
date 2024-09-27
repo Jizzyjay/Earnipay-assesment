@@ -1,4 +1,4 @@
-# Earnipay Assessment
+# Kobi Assessment
 
 ## Overview
 
@@ -28,3 +28,4 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - Next.js
 - Typescript
+# kobi
